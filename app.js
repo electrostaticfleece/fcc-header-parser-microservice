@@ -7,7 +7,7 @@ app.all("*", function(req, res, next) {
   next();
 });
 
-app.get('/', (req, res) => {
+app.get('/', function(req, res){
     var ip = req.ip,
         lang =  req.acceptsLanguages(),
         oppSys = req.headers['user-agent'].match(/\(([^)]+)\)/)[0].slice(1,-1);
@@ -19,6 +19,6 @@ app.get("*", function(req, res) {
 });
 
 
-const listener = app.listen(process.env.PORT || 3000, () => {
-    console.log("Server is listening on port " + listener.address().port);
+app.listen((process.env.PORT || 3000), function(){
+    console.log("Server is listening on port *:3000");
 });
