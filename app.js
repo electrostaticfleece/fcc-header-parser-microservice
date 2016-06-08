@@ -18,7 +18,6 @@ app.get("*", function(req, res) {
   res.end("404!");
 });
 
-
 app.listen((process.env.PORT || 3000), function(){
     console.log("Server is listening on port *:3000");
 });
