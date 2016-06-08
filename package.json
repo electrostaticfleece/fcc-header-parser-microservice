@@ -1,0 +1,16 @@
+{
+  "name": "header-parser-microservice",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "~4.13.4"
+  },
+  "description": "Header Parser Microservice for Free Code Camp curriculum",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [ "header parser"
+  ],
+  "author": "electrostaticfleece",
+  "license": "ISC"
+}
