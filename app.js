@@ -9,9 +9,10 @@ app.all("*", function(req, res, next) {
 });
 
 app.get('/', function(req, res){
-    var ip = req.ip,
+    var ip = req.headers['x-forwarded-for'] || request.connection.remoteAddress,
         lang =  req.acceptsLanguages(),
         oppSys = req.headers['user-agent'].match(/\(([^)]+)\)/)[0].slice(1,-1);
+        console.log(ip);
     res.end(JSON.stringify({"ipaddress": ip, "language": lang, 'OS': oppSys }));
 });
 
