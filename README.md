@@ -1,0 +1,1 @@
+The header parser microservice displays a client's IP address, browser language, and OS upon visiting. This was a project for Free Code Camp's curriculum.
