@@ -1,6 +1,7 @@
 const http = require('http'),
       express = require('express'),
-      app = express();
+      app = express(),
+      port = (process.env.PORT || 3000);
 
 app.all("*", function(req, res, next) {
   res.writeHead(200, { "Content-Type": "text/plain" });
@@ -18,6 +19,6 @@ app.get("*", function(req, res) {
   res.end("404!");
 });
 
-app.listen((process.env.PORT || 3000), function(){
+app.listen(port, function(){
     console.log("Server is listening on port *:3000");
 });
